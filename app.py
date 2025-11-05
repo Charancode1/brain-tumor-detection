@@ -6,7 +6,7 @@ import random
 classes = ['Glioma Tumor', 'Meningioma Tumor', 'Pituitary Tumor', 'No Tumor']
 
 st.title("🧠 Brain Tumor Detection Demo")
-st.write("Upload an MRI image and get a fake prediction for demo purposes.")
+
 
 # Upload section
 uploaded_file = st.file_uploader("Choose an MRI image...", type=["jpg", "jpeg", "png"])
@@ -20,3 +20,4 @@ if uploaded_file is not None:
     if st.button("Predict Tumor Type"):
         prediction = random.choice(classes)
         st.success(f"✅ Predicted Tumor Type: **{prediction}**")
+
